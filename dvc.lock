@@ -20,29 +20,29 @@ stages:
           metrics_file: outs/data_metrics.json
     outs:
     - path: outs/data
-      md5: df3bf10a068e031cc4bbdc281bcd1838.dir
-      size: 8351
-      nfiles: 159
+      md5: 2e944cb029e99fbe8772444f96dae7fb.dir
+      size: 8436
+      nfiles: 160
     - path: outs/data_metrics.json
-      md5: 8c161c9f908253d9f16e35161f6d69db
+      md5: a42c7e6fc31ddabd507d0ff670d926e3
       size: 63
   split-data:
     cmd: python src/split_data.py outs/data outs/split 0.1 outs/split_metrics.json
     deps:
     - path: outs/data
-      md5: df3bf10a068e031cc4bbdc281bcd1838.dir
-      size: 8351
-      nfiles: 159
+      md5: 2e944cb029e99fbe8772444f96dae7fb.dir
+      size: 8436
+      nfiles: 160
     - path: src/split_data.py
       md5: 4257c1dd971b77407f5e86af0e0edd4d
       size: 2177
     outs:
     - path: outs/split
-      md5: 6060c7fa6a72337bdcd832b129dd41b7.dir
-      size: 12509
+      md5: 6bb5f804024e6ed58269f93b4ae824f1.dir
+      size: 12620
       nfiles: 2
     - path: outs/split_metrics.json
-      md5: e5d513c4ffa6c2ef507e1eb3235c9e4d
+      md5: 09ce6565c9b650e80cb6c27fa2842e21
       size: 166
   compute-data-metrics:
     cmd: python src/compute_data_metrics.py --input_folder outs/data --output_metrics_file
